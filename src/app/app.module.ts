@@ -10,6 +10,13 @@ import { PackagesComponent } from './packages/packages.component';
 import { AboutComponent } from './about/about.component';
 import { ProcessComponent } from './process/process.component';
 import { HeaderBlackComponent } from './shared/header-black/header-black.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from 'src/environments/environment';
+import { ApiHubService } from './api-hub.service';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +27,20 @@ import { HeaderBlackComponent } from './shared/header-black/header-black.compone
     PackagesComponent,
     AboutComponent,
     ProcessComponent,
-    HeaderBlackComponent
+    HeaderBlackComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [
+    ApiHubService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

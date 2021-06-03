@@ -152,27 +152,27 @@
 
             <div style="padding: 30px;">
 
-            <form>
+            <form [formGroup]="estimateForm">
                 
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" formControlName="name">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="contact">Contact No.</label>
-                    <input type="number" class="form-control" id="contact" >
+                    <input type="number" class="form-control" id="contact" formControlName="mobile">
                   </div>
                 </div>
     
                 <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="area">Plot area (Sq. Feet)</label>
-                  <input type="text" class="form-control" id="area">
+                  <input type="text" class="form-control" id="area" formControlName="plotArea">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="floors">Number of floors</label>
-                  <select id="inputState" class="form-control">
+                  <select id="inputState" class="form-control" formControlName="floors">
                     <option selected>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -180,7 +180,7 @@
                 </div>
                 </div>
     
-                <button type="submit" class="btn btn-outline-dark">Estimate</button>
+                <button type="submit" (click)="submitEstimateForm()" class="btn btn-outline-dark">Estimate</button>
               </form>
               </div>
         </div>
@@ -413,45 +413,45 @@
 
         <div style="padding: 50px;"></div>
 
-        <form>
+        <form [formGroup]="enquiryForm">
             
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Name</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="Name">
+                <input type="text" class="form-control" id="inputEmail4" placeholder="Name" formControlName="eName">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputNumber4">Phone Number</label>
-                <input type="number" class="form-control" id="inputNumber4" placeholder="Phone Number">
+                <input type="number" class="form-control" id="inputNumber4" placeholder="Phone Number" formControlName="key">
               </div>
             </div>
 
             <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputAddress">Location</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Location">
+              <input type="text" class="form-control" id="inputAddress" placeholder="Location" formControlName="eLocation">
             </div>
             <div class="form-group col-md-6">
               <label for="inputAddress2">Plot Area</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Plot Area">
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Plot Area" formControlName="ePlotArea"> 
             </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">Floors</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" id="inputCity" formControlName="eFloors">
               </div>
               <div class="form-group col-md-4">
                 <label for="inputState">Type</label>
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" formControlName="eType">
                   <option selected>2 BHK</option>
                   <option>3 BHK</option>
                 </select>
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" (click)="submitEnquiryForm()" class="btn btn-primary">Submit</button>
           </form>
     </div>
 
