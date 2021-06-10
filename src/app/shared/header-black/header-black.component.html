@@ -3,28 +3,32 @@
     <div class="row" style="padding-left: 40px; width: 100%;"> 
     
     <div style="float: left; padding-left: 40px;" class="col-3">
-      <h1 class="navbar-brand"><span class="font-white" (click)="onHomeClick()"><b>OGB</b></span></h1>
+      <img    
+            src="assets/ogb-black.png"
+            style="width: 80px; height: 30px; cursor: pointer;"
+            (click)="onHomeClick()"
+        />
     </div>
   
     <div style="float: right;" class="col-6">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <div class="nav-link font-white" (click)="onPackageClick()" >Packages</div>
+          <div class="nav-link font-white pointer" (click)="onPackageClick()" >Packages</div>
         </li>
         <li class="nav-item">
-          <div class="nav-link font-white" (click)="onProcessClick()" >Process</div>
+          <div class="nav-link font-white pointer" (click)="onProcessClick()" >Process</div>
         </li>
         <li class="nav-item">
-          <div class="nav-link font-white" (click)="onAboutClick()" >About</div>
+          <div class="nav-link font-white pointer" (click)="onAboutClick()" >About</div>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <div class="nav-link font-white" (click)="onHomeClick()">Blogs</div>
-        </li>
+        </li> -->
       </ul>
     </div>
   
-    <div style="float: right; padding-left: 40px;" class="col-3">
-      <h3 class="navbar-brand font-white" ><span class="font-white">Contact us</span></h3>
+    <div style="float: right; padding-left: 100px;" class="col-3">
+      <h3 class="navbar-brand font-white pointer" ><span (click)="onContactClick()" class="font-white">Contact us</span></h3>
     </div>
   
     

@@ -16,6 +16,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from 'src/environments/environment';
 import { ApiHubService } from './api-hub.service';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ApiHubService } from './api-hub.service';
     AboutComponent,
     ProcessComponent,
     HeaderBlackComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,

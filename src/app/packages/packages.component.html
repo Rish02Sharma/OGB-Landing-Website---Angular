@@ -9,55 +9,49 @@
             alt="Landing Page2"
         />
     
-        <div style="color: white; font-size: larger; width: 100%;">
+        <div style="font-size: larger; width: 100%;">
         <h5><span class="image2-heading1">Cost calculator</span></h5> <br />
-        <h3><span class="image2-heading2">Get an approxx estimate of your project</span></h3>
+        <h3><span class="image2-heading2">Get an approximate estimate of your project.</span></h3>
+        <h4><span class="image2-heading3">To get detailed and exact quote contact us.</span></h4>
 
 
         <div class="image2-card">
 
-            <div class="row" style="padding: 15px;">
-            <div class="col">
-                <label style="color: black;">Name</label>
-                <div class="input-group mb-3">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-            </div>
-
-            <div class="col">
-                <label style="color: black;">Contact No.</label>
-                <div class="input-group mb-3">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="padding: 15px;">
-            <div class="col">
-                <label style="color: black;">Plot area, Square feet</label>
-                <div class="input-group mb-3">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-            </div>
-
-            <div class="col">
-                <label style="color: black;">Number of floors</label>
-                <div class="input-group mb-3">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="padding-left: 30px; padding-right: 30px;">
-            <button type="button" class="btn col btn-outline-dark">Estimate</button>
-            <div class="col"></div>
-        </div>
+            <form [formGroup]="estimateForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" formControlName="name">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="contact">Contact No.</label>
+                      <input type="number" class="form-control" id="contact" formControlName="mobile">
+                    </div>
+                  </div>
+      
+                  <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="area">Plot area (Sq. Feet)</label>
+                    <input type="text" class="form-control" id="area" formControlName="plotArea">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="floors">Number of floors</label>
+                    <select id="inputState" class="form-control" formControlName="floors">
+                      <option selected>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  </div>
+      
+                  <button type="submit" (click)="submitEstimateForm(); scroll(view);" class="btn btn-outline-dark">Estimate</button>
+            </form>
         </div>
         </div>
     </div>
 
 
-    <div style="padding: 100px;">
+    <div #view style="padding: 100px;">
         <div class="d-flex justify-content-center" style="width: 100%; height: 300px; position: relative;">
     
             <div class="p-2 plan-box">
@@ -68,7 +62,7 @@
                 style="width: 20%; height: 50px;"
                 /> <br /><br />
 
-                <b>$ 1000 / sq feet</b><br />
+                <b> INR {{basicPlanAmount}} / sq feet</b><br />
                 <span style="font-size: 10px;">
                     OGB provides end-to-end cont services<br />
                     from designated services
@@ -85,7 +79,7 @@
                 style="width: 20%; height: 50px;"
                 /> <br /><br />
 
-                <b>$ 1200 / sq feet</b><br />
+                <b>INR {{standardPlanAmount}} / sq feet</b><br />
                 <span style="font-size: 10px;">
                 OGB provides end-to-end cont services<br />
                 from designated services
@@ -102,7 +96,7 @@
                 style="width: 20%; height: 50px;"
                 /> <br /><br />
 
-                <b>$ 1500 / sq feet</b><br />
+                <b>INR {{premiumPlanAmount}} / sq feet</b><br />
                 <span style="font-size: 10px;">
                 OGB provides end-to-end cont services<br />
                 from designated services

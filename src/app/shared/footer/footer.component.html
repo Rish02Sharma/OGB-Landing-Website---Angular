@@ -1,10 +1,13 @@
 <div class="footer">
 
-    <div class="row" style="width: 100%;">
+    <div class="row" style="width: 100%; line-height: 1.2;">
 
         <div class="col" style="color: white; margin: 20px;">
 
-            <span style="font-size: 50px;"><b>OGB</b></span> <br /> <br />
+            <img    
+            src="assets/ogb-white.png"
+            style="width: 100px; height: 40px;"
+        /> <br /> <br />
 
             <p>
                 126-27-28, Okay Plus Spaces, Near <br />
@@ -23,9 +26,9 @@
             <span style="font-size: 20px;"><b>Explore</b></span> <br /><br />
 
 
-            Construction Calculator <br />
-            Process <br />
-            Pricing <br />
+            <a style="cursor: pointer;" (click)="onPackageClick()"> Construction Calculator </a> <br />
+            <a style="cursor: pointer;" (click)="onProcessClick()">Process </a><br />
+            <a style="cursor: pointer;" (click)="onAboutClick()">Pricing </a><br />
 
         </div>
 

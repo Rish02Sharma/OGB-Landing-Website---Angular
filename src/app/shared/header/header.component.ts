@@ -31,4 +31,8 @@ export class HeaderComponent implements OnInit {
     this._router.navigate([ '/home']);
   }
 
+  onContactClick(){
+    this._router.navigate([ '/contactus']);
+  }
+
 }

@@ -10,10 +10,10 @@
     
         <div style="color: white; font-size: 60px; width: 100%;">
             <span c style="position: absolute; top: 30%; left: 25%;">
-                <b>Construction simplified,<br />
-                from designing to delivering.</b>
+                <b>Making Construction easy<br />
+                    from design to delivering</b>
                     <br />
-                <button type="button" class="btn btn-success">Build with us</button>
+                <button type="button" (click)="scroll(estimate)" class="btn btn-success">Build with us</button>
             </span>
             
             
@@ -33,7 +33,7 @@
 
             <div class="col-8 align-self-center">
             <strong>Trust</strong><br />
-            <span style="color: #4C4C4C;">100% Trusted</span>
+            <span style="color: #4C4C4C;">Excellent Workmanship</span>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
 
             <div class="col-8 align-self-center">
             <strong>Transparency</strong><br />
-            <span style="color: #4C4C4C;">Full transparency in work</span>
+            <span style="color: #4C4C4C;">Verified Materials & Labour</span>
             </div>
         </div>
 
@@ -61,135 +61,14 @@
 
             <div class="col-8 align-self-center">
             <strong>Technology</strong><br />
-            <span style="color: #4C4C4C;">Latest tech in hand</span>
+            <span style="color: #4C4C4C;">Remote Project Tracking</span>
             </div>
         </div>
 
     </div>
 
 
-    <div style="padding: 100px; ">
-        <h5><span style="color: #2ECC71;">Our packages</span></h5>
-        <h4><b>Choose the plan that's right for you</b></h4>
-
-        <div class="d-flex justify-content-center" style="width: 100%; height: 350px; position: relative;">
-    
-            <div class="p-2 plan-box">
-                <strong><b>Basic plan</b></strong><br /><br />
-
-                <img    
-                src="assets/diamond-blue.png"
-                style="width: 20%; height: 50px;"
-                /> <br /><br />
-
-                <b>$ 1000 / sq feet</b><br />
-                <span style="font-size: 10px;">
-                    OGB provides end-to-end cont services<br />
-                    from designated services
-                </span>
-                <br/>
-                <br/>
-                <br/>
-                <button type="button" class="btn btn-outline-dark">Know more</button>
-            </div>
-    
-            <div class="p-2 plan-box">
-                <strong><b>Standard plan</b></strong><br /><br/>
-
-                <img    
-                src="assets/diamond-yellow.png"
-                style="width: 20%; height: 50px;"
-                /> <br /><br />
-
-                <b>$ 1200 / sq feet</b><br />
-                <span style="font-size: 10px;">
-                OGB provides end-to-end cont services<br />
-                from designated services
-                </span>
-                <br/>
-                <br/>
-                <br/>
-                <button type="button" class="btn btn-outline-dark">Know more</button>
-            </div>
-    
-            <div class="p-2 plan-box">
-                <strong><b>Technology</b></strong><br /><br/>
-
-                <img    
-                src="assets/diamond-pink.png"
-                style="width: 20%; height: 50px;"
-                /> <br /><br />
-
-                <b>$ 1500 / sq feet</b><br />
-                <span style="font-size: 10px;">
-                OGB provides end-to-end cont services<br />
-                from designated services
-                </span>
-                <br/>
-                <br/>
-                <br/>
-                <button type="button" class="btn btn-outline-dark">Know more</button>
-            </div>
-    
-        </div>
-
-    </div>
-
-    <div class="image-estimate">
-    
-        <img    
-            src="assets/ogb-main2.png"
-            style="width: 100%; height: 600px;"
-            alt="Landing Page2"
-        />
-    
-        <div style="color: white; font-size: larger; width: 100%;">
-        <h5><span class="image2-heading1">Cost calculator</span></h5> <br />
-        <h3><span class="image2-heading2">Get an approx estimate of your project</span></h3>
-
-
-        <div class="image2-card">
-
-            <div style="padding: 30px;">
-
-            <form [formGroup]="estimateForm">
-                
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" formControlName="name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="contact">Contact No.</label>
-                    <input type="number" class="form-control" id="contact" formControlName="mobile">
-                  </div>
-                </div>
-    
-                <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="area">Plot area (Sq. Feet)</label>
-                  <input type="text" class="form-control" id="area" formControlName="plotArea">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="floors">Number of floors</label>
-                  <select id="inputState" class="form-control" formControlName="floors">
-                    <option selected>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                  </select>
-                </div>
-                </div>
-    
-                <button type="submit" (click)="submitEstimateForm()" class="btn btn-outline-dark">Estimate</button>
-              </form>
-              </div>
-        </div>
-
-        </div>
-    </div>
-
-
-    <div style="padding-top: 200px;">
+    <div style="padding-top: 100px; margin-bottom: 50px;">
 
         <div style="color: #2ECC71; width: 100%; text-align: center;">
         How it works
@@ -208,8 +87,84 @@
         <br/>
         <br/>
         <div style="width: 100%;"> 
-        <button type="button" style="margin-left: 47%;" class="btn btn-outline-dark">Know more</button>
+        <button type="button" (click)="onProcessClick()" style="margin-left: 47%;" class="btn btn-outline-dark">Know more</button>
         </div>
+    </div>
+
+    <div #estimate class="row" style="width: 100%; height: 200px; background-color: #2ECC71; padding: 60px;">
+        <span class="col" style="font-size: 30px; color: white;">
+            <b>Looking To Construct A Home? <br />
+             Find Out What It Costs.</b></span>       
+        <button class="col" style="width: 20%; height: 50px; margin-left: 40%;" type="submit" (click)="onPackageClick()" class="btn btn-dark">Get Free Estimate</button>
+    </div>
+    
+
+
+    <div style="padding: 100px; ">
+        <h5><span style="color: #2ECC71;">Our packages</span></h5>
+        <h4><b>Choose the plan that's right for you</b></h4>
+
+        <div class="d-flex justify-content-center" style="width: 100%; height: 350px; position: relative;">
+    
+            <div class="p-2 plan-box">
+                <strong><b>Basic plan</b></strong><br /><br />
+
+                <img    
+                src="assets/diamond-blue.png"
+                style="width: 20%; height: 50px;"
+                /> <br /><br />
+
+                <b>INR 1000 / sq feet</b><br />
+                <span style="font-size: 10px;">
+                    OGB provides end-to-end cont services<br />
+                    from designated services
+                </span>
+                <br/>
+                <br/>
+                <br/>
+                <button type="button" (click)="onPackageClick()" class="btn btn-outline-dark">Know more</button>
+            </div>
+    
+            <div class="p-2 plan-box">
+                <strong><b>Standard plan</b></strong><br /><br/>
+
+                <img    
+                src="assets/diamond-yellow.png"
+                style="width: 20%; height: 50px;"
+                /> <br /><br />
+
+                <b>INR 1200 / sq feet</b><br />
+                <span style="font-size: 10px;">
+                OGB provides end-to-end cont services<br />
+                from designated services
+                </span>
+                <br/>
+                <br/>
+                <br/>
+                <button type="button" (click)="onPackageClick()" class="btn btn-outline-dark">Know more</button>
+            </div>
+    
+            <div class="p-2 plan-box">
+                <strong><b>Technology</b></strong><br /><br/>
+
+                <img    
+                src="assets/diamond-pink.png"
+                style="width: 20%; height: 50px;"
+                /> <br /><br />
+
+                <b>INR 1500 / sq feet</b><br />
+                <span style="font-size: 10px;">
+                OGB provides end-to-end cont services<br />
+                from designated services
+                </span>
+                <br/>
+                <br/>
+                <br/>
+                <button type="button" (click)="onPackageClick()" class="btn btn-outline-dark">Know more</button>
+            </div>
+    
+        </div>
+
     </div>
 
 
@@ -335,7 +290,7 @@
                 </button>
                 <div class="collapse multi-collapse" id="multiCollapseExample2">
                     <div style="padding: 10px 3px 3px 5px">
-                        Just go to our website!  
+                        We are very soon launching our biding platform, until then send a mail to vishal@ogbuilders.in
                     </div>
                 </div>
             </div>
@@ -348,7 +303,7 @@
                 </button>
                 <div class="collapse multi-collapse" id="multiCollapseExample3">
                     <div style="padding: 10px 3px 3px 5px">
-                        We use standard procedure for estimation by extracting BOQ of your requirements with the exact quantity of labour and material required. Project is designed considering variable factors such as location, scale, type, and technical. Project will be completed in a given period of time.  
+                        Please contact our support number +91-8005614503 , where we will provide assistance regarding obtaining new license and becoming our partner
                     </div>
                 </div>
             </div>
@@ -359,7 +314,7 @@
                 </button>
                 <div class="collapse multi-collapse" id="multiCollapseExample4">
                     <div style="padding: 10px 3px 3px 5px">
-                        Just go to our website!  
+                        We are very soon launching our projects platform, until then send a mail to vishal@ogbuilders.in
                     </div>
                 </div>
             </div>
@@ -378,15 +333,17 @@
 
         <div class="d-flex" style="width: 100%; height: 200px; position: relative;">
     
-            <div class="p-2 blog-image-box">
+            <a onclick="window.open('https://timesofindia.indiatimes.com/spotlight/why-is-it-the-right-time-to-invest-in-real-estate/articleshow/79661986.cms', '_blank');" 
+                class="p-2 blog-image-box">
                 <img    
                     src="assets/blog1.png"
                     style="width: 100%; height: 250px;"
                     alt="Landing Page"
                 />
-            </div>
+            </a>
     
-            <div class="p-2 blog-image-box">
+            <div onclick="window.open('https://www.buildersmart.in/blogs/Challenges-faced-while-constructing-a-house-by-an-individual/', '_blank');"
+                class="p-2 blog-image-box">
                 <img    
                     src="assets/blog2.png"
                     style="width: 100%; height: 250px;"
@@ -394,7 +351,8 @@
                 />
             </div>
     
-            <div class="p-2 blog-image-box">
+            <div onclick="window.open('https://nbcpa.us/6-ways-to-prevent-construction-fraud/', '_blank');" 
+                class="p-2 blog-image-box">
                 <img    
                     src="assets/blog3.png"
                     style="width: 100%; height: 250px;"
@@ -451,7 +409,7 @@
               </div>
             </div>
 
-            <button type="submit" (click)="submitEnquiryForm()" class="btn btn-primary">Submit</button>
+            <button type="submit" (click)="submitEnquiryForm()" class="btn btn-success">Submit</button>
           </form>
     </div>
 

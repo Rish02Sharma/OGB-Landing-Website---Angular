@@ -1,0 +1,50 @@
+<div style="height:100vh;">
+    <app-header-black></app-header-black>
+
+    <div class="image">
+
+        <div style="color: black;  width: 100%;">
+            <span style="position: absolute; font-size: 50px; top: 15%; left: 40%;">
+                <b>Contact Us</b>
+            </span>
+            <span style="position: absolute; font-size: 15px; top: 55%; left: 43%;">
+               Mail at <b>info@ogbuilders.in</b>
+            </span>
+        </div>
+    </div>
+
+    <div style="padding: 100px;" >
+        <h5><span style="color: #2ECC71;">Have something to get in touch for? Or want us to call you back?</span></h5>
+
+        <div style="padding: 20px;"></div>
+        <form [formGroup]="contactForm">
+            
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Name" formControlName="name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputNumber">Phone Number</label>
+                <input type="number" class="form-control" id="inputNumber" placeholder="Phone Number" formControlName="phone">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="text" class="form-control" id="inputEmail" formControlName="email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputMessage">Message</label>
+                <input type="text" class="form-control" id="inputMessage" formControlName="message">
+              </div>
+            </div>
+
+            <button type="submit" (click)="submitContactForm()" class="btn btn-success">Submit</button>
+          </form>
+    </div>
+
+    <app-footer></app-footer>
+
+</div>

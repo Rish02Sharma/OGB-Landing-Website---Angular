@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "ogb-backend",
+    "prod": "ogb-backend"
+  }
+}
